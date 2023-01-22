@@ -1,4 +1,4 @@
-const Phonebook = ({ contacts, onDeleteContact }) => {
+const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => (
@@ -11,4 +11,4 @@ const Phonebook = ({ contacts, onDeleteContact }) => {
     </ul>
   );
 };
-export default Phonebook;
+export default ContactList;
