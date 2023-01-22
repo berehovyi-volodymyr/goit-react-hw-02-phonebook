@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from './contactForm.module.css';
 
 class ContactForm extends Component {
@@ -6,6 +7,8 @@ class ContactForm extends Component {
     name: '',
     number: '',
   };
+
+  static propTypes = { onSubmit: PropTypes.func.isRequired };
 
   handleChange = e => {
     this.setState({ [e.currentTarget.name]: e.currentTarget.value });
