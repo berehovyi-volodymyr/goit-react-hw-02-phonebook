@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import styles from './contactForm.module.css';
 
 class ContactForm extends Component {
   state = {
@@ -24,10 +25,11 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={styles.form} onSubmit={this.handleSubmit}>
         <label>
-          Name
+          <span className={styles.name}>Name</span>
           <input
+            className={styles.input}
             type="text"
             name="name"
             value={this.state.name}
@@ -38,8 +40,9 @@ class ContactForm extends Component {
           />
         </label>
         <label>
-          Number
+          <span className={styles.number}>Number</span>
           <input
+            className={styles.input}
             type="tel"
             name="number"
             value={this.state.number}
@@ -50,7 +53,9 @@ class ContactForm extends Component {
           />
         </label>
 
-        <button type="submit">Add contact</button>
+        <button className={styles.button} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }
